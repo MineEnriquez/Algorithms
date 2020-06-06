@@ -9,15 +9,15 @@ class MatchingPairs {
   
   private static int matchingPairs(string s, string t) {
     int counter = 0;
+    int oneSideMatch = 0;
+    int crossMatch = 0;
     for( int i = 0; i<s.Length; i++)
     {
         if (s[i] == t[i]){
             counter ++;
             continue;
         }
-        else if (s[i] != t[i]){
-            int crossMatch = 0;
-            int oneSideMatch = 0;
+        else if (s[i] != t[i]){      
             for(int j = i; j<t.Length; j++){
                 if (s[i] == t[j] && s[j]==t[i]){  
                      crossMatch = j;
@@ -28,12 +28,14 @@ class MatchingPairs {
                 }
             }
             //swap 
-            
-            // TODO: FINISH.
-
+            if ( crossMatch!= 0 ) 
+            { 
+              s[i] = s[crossMatch];
+              counter++;
+            }
         }
     }
-    
+  
     
     return counter;
   }
