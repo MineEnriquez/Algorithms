@@ -1,4 +1,4 @@
-# Balance Brackets
+# Balance Brackets - Stacks
 A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
 We consider two brackets to be matching if the first element is an open-bracket, e.g., (, {, or [, and the second bracket is a close-bracket of the same type, e.g., ( and ), [ and ], and { and } are the only pairs of matching brackets.
 Furthermore, a sequence of brackets is said to be balanced if the following conditions are met:
