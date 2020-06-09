@@ -30,34 +30,17 @@ Given an list of a node information in the form of value pairs [number, letter] 
 
 ### JavaScript Test Cases:
 
-    // Add any extra import statements you may need here
-
-
     // Definition for a Node
     function Node(val, children) {
     this.val = val === undefined ? 0 : val;
     this.children = children === undefined ? [] : children;
     };
-
     // Add any helper functions you may need here
-
-
     function countOfNodes(root, queries, string) {
-    // Write your code here
-    
+        // todo    
     }
-
-
-
-
-
-
-
-
-
-
-
-    // These are the tests we use to determine if the solution is correct.
+        - - -
+// These are the tests we use to determine if the solution is correct.
     // You can add your own at the bottom, but they are otherwise not editable!
     function printintegerArray(array) {
     var size = array.length;
