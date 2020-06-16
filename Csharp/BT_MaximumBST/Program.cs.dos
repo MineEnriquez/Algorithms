@@ -1,0 +1,57 @@
+using System;
+using System.Collections;
+
+class Program{
+    static void Main(){
+        BT bt = new BT();
+        bt.Root = new Node(10);
+        bt.Root.Left = new Node(5);
+        bt.Root.Left.Left = new Node(1);
+        bt.Root.Left.Right = new Node(8);
+        bt.Root.Right = new Node(13);
+        bt.Root.Right.Right = new Node(7);
+       string x =  bt.FindBiggestBST(bt.Root);
+        Console.WriteLine(x);
+    }
+}
+
+class Node
+{
+    private int v;
+
+    public Node(int v)
+    {
+        this.v = v;
+        this.Left = null;
+        this.Right = null;
+    }
+
+    public Node Left { get; set; }
+    public Node Right { get; set; }
+}
+
+class BT
+{
+    public BT()
+    {
+    }
+
+    public Node Root { get; set; }
+    internal string FindBiggestBST(Node root)
+    {
+       return UtilFindBiggestBST(root);
+        
+    }
+
+    private string UtilFindBiggestBST(Node _node)
+    {
+        if (_node== null) return "^";
+        else
+            
+        UtilFindBiggestBST(_node.Left);
+        UtilFindBiggestBST(_node.Right);
+        
+        //throw new NotImplementedException();
+        
+    }
+}
