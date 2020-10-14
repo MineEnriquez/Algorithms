@@ -1,21 +1,18 @@
-﻿using System;
-using System.Runtime.Versioning;
-using System.Security.Cryptography.X509Certificates;
-
-namespace ReverseWordsInArray
+using System;					
+public class Program
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            
-           string[] myarray = new string[5]{"Hola", "Miss", "Stphanie", "Monique", "bonita"};
-           foreach (string x in myarray){
-               char[] word = x.ToCharArray();
-               for (int i=0; i < word.Length; i++ ){
-
+	public static void Main()
+	{
+		   string[] myarray = new string[5]{"Hola", "Miss", "Stphanie", "Monique", "bonita"};
+           for(int j = 0; j<myarray.Length; j++){
+               char[] word = myarray[j].ToCharArray();
+                for (int i=0; i < word.Length/2; i++ ){
+				   char temp = word[i];
+				   word[i] = word[word.Length-1-i];
+					word[word.Length-1-i] = temp;
                }
-           }
-        }
-    }
+			   myarray[j] = new string(word);
+			   Console.WriteLine(myarray[j]);	   
+           }	
+	}
 }
