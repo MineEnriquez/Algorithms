@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 
-// We don’t provide test cases in this language yet, but have outlined the signature for you. Please write your code below, and don’t forget to
 public class EncryptedWords
 {
     static void Main(String[] args)
